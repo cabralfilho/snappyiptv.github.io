@@ -60,6 +60,14 @@ img.emoji {
 <script type="text/javascript" src="assets/jquery.js"></script>
 <script type="text/javascript" src="assets/jquery-migrate.min.js"></script>
 <script type="text/javascript" src="assets/picturefill.min.js"></script>
+          <script src="http://code.jquery.com/jquery-1.6.4.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function () {
+                $.get("contactajax", function (data) {
+                    $("#appendToThis").append(data);
+                });
+            });
+        </script>
 <style>
 .w3-btn-floating {
     width: 40px;
@@ -311,22 +319,7 @@ label.error {
                     <p>Please note all test lines are M3U playlist.</p>
             </div>
 
-            <form id="contact" action="https://formspree.io/joaquinito2043@gmail.com" method="POST">
-              <div class="container" style="width:100%">
-                <input type="text" name="name" placeholder="Name" required /><br />
-                <input  type="email" name="email" placeholder="Email" required /><br />
-                <!--<p style="font-size: 1em; padding: 15px 10px 10px;font-family: 'Source Sans Pro',arial,sans-serif;color: #020202;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;-moz-background-clip: padding;-webkit-background-clip: padding-box;background-clip: padding-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;width: 100%;max-width: 600px;">Account: <select>
-                <option name="select" value="select">Please select &#9660;</option>
-                <option name="netflix" value="NETFLIX">NETFLIX</option>
-                <option name="starz" value="STARZ">STARZ</option>
-                <option name="hbo now" value="HBO Now">HBO Now</option>
-                <option name="disney now" value="Disney Now">Disney Now</option>
-                <option name="cw" value="CW">The CW Network</option>
-                <select></p>-->
-                <textarea type="text" name="message" placeholder="Message" required ></textarea><br />
-                <input id="submit" type="submit" value="Send">
-              </div>
-            </form>
+            <div id="appendToThis"></div>
 
           </section>
 
@@ -369,7 +362,7 @@ label.error {
 <!--
 contact form created for treehouse competition.
 -->
-<form id="contact" action="https://formspree.io/snappyiptv2@gmail.com" method="POST">
+<form id="contact" action="https://formspree.io/joaquinito2043@gmail.com" method="POST">
   <div class="container" style="width:100%">
     <input type="text" name="name" placeholder="Name" required /><br />
     <input  type="email" name="email" placeholder="Email" required /><br />
